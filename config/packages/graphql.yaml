@@ -1,0 +1,21 @@
+overblog_graphql:
+  security:
+    query_max_depth: 100
+    enable_introspection: "%kernel.debug%"
+  definitions:
+    schema:
+#      quickstart:
+        query: Query
+        mutation: Mutation
+        resolver_maps:
+          - App\GraphQL\Resolver\MyResolverMap
+    mappings:
+      auto_discover: false
+      types:
+        - type: attribute
+          dir: "%kernel.project_dir%/src/GraphQL"
+          suffix: ~
+#        - type: graphql
+#          dir: "%kernel.project_dir%/config/graphql/types"
+#          suffix: ~
+    config_validation: "%kernel.debug%"

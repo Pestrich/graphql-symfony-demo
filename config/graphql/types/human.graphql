@@ -1,0 +1,4 @@
+type Human {
+    id: ID!
+    name: String!
+}
